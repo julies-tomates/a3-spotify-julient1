@@ -6,6 +6,7 @@ import { TrackData } from '../data/track-data';
 import { ResourceData } from '../data/resource-data';
 import { ProfileData } from '../data/profile-data';
 import { TrackFeature } from '../data/track-feature';
+import { createOfflineCompileUrlResolver } from '@angular/compiler';
 
 
 @Injectable({
@@ -20,6 +21,12 @@ export class SpotifyService {
     //TODO: use the injected http Service to make a get request to the Express endpoint and return the response.
     //the http service works similarly to fetch(). It may be useful to call .toPromise() on any responses.
     //update the return to instead return a Promise with the data from the Express server
+   
+    var aPromise = new Promise((resolve,reject) =>{
+      this.http.get(this.expressBaseUrl).toPromise()
+    }
+    //return aPromise;
+
     return Promise.resolve();
   }
 
