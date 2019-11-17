@@ -23,11 +23,11 @@ export class SpotifyService {
     //update the return to instead return a Promise with the data from the Express server
    
     var aPromise = new Promise((resolve,reject) =>{
-      this.http.get(this.expressBaseUrl).toPromise()
-    }
-    //return aPromise;
+      this.http.get(this.expressBaseUrl+"/callback").toPromise()
+    };
+    return aPromise;
 
-    return Promise.resolve();
+    //return Promise.resolve();
   }
 
   aboutMe():Promise<ProfileData> {
