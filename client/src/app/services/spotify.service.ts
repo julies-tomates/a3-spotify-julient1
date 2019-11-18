@@ -13,7 +13,7 @@ import { createOfflineCompileUrlResolver } from '@angular/compiler';
   providedIn: 'root'
 })
 export class SpotifyService {
-	expressBaseUrl:string = 'http://localhost:8888';
+  expressBaseUrl:string = 'http://localhost:8888';
 
   constructor(private http:HttpClient) { }
 
@@ -22,10 +22,11 @@ export class SpotifyService {
     //the http service works similarly to fetch(). It may be useful to call .toPromise() on any responses.
     //update the return to instead return a Promise with the data from the Express server
    
-    var aPromise = new Promise((resolve,reject) =>{
-      this.http.get(this.expressBaseUrl+"/callback").toPromise()
-    };
-    return aPromise;
+   /* var aPromise = new Promise((resolve,reject) =>{
+      this.http.get(this.expressBaseUrl+endpoint).toPromise();
+    });
+    */
+    return this.http.get(this.expressBaseUrl+endpoint).toPromise();
 
     //return Promise.resolve();
   }
