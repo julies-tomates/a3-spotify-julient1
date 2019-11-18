@@ -12,7 +12,7 @@
 </select>
 <!--TODO: Call search function when the button is clicked-->
 <button (click)='search()' class="btn btn-light">Search</button>
-<app-carousel id="carouselId"></app-carousel>
-<app-track-list></app-track-list>
+<app-carousel [resources]="resources" [carouselId]="searchCategory"></app-carousel>
+<app-track-list [tracks]="tracks"></app-track-list>
 <!--TODO: Display a carousel component if searching for an artist or album. Bind carousel's resources and give it a static carouselId.-->
 <!--TODO: Display a track-list component if searching for a track. Bind track-list's tracks.-->
