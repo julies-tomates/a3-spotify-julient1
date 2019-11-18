@@ -82,17 +82,18 @@ export class SpotifyService {
 
   getRelatedArtists(artistId:string):Promise<ArtistData[]> {
     //TODO: use the related artist endpoint to make a request to express and return an array of artist data.
-    return this.sendRequestToExpress('/artist/'+encodeURIComponent(artistId)+'/related-artists').then((data)=> {
-      return data.items.map((artist) => {
+    return this.sendRequestToExpress('/artist-related-artists/'+encodeURIComponent(artistId)).then((data)=> {
+      return data['artists'].map((artist) => {
         return new ArtistData(artist);
-      })
-    });
+      });
+    }); 
+
   }
 
   getTopTracksForArtist(artistId:string):Promise<TrackData[]> {
     //TODO: use the top tracks endpoint to make a request to express.
-    return this.sendRequestToExpress('/artist/'+encodeURIComponent(artistId)+'/top-tracks').then((data)=> {
-      return data.items.map((artist) => {
+    return this.sendRequestToExpress('/artist-top-tracks/'+encodeURIComponent(artistId)).then((data)=> {
+      return data['artists'].map((artist) => {
         return new TrackData(artist);
       })
     });
@@ -100,10 +101,10 @@ export class SpotifyService {
 
   getAlbumsForArtist(artistId:string):Promise<AlbumData[]> {
     //TODO: use the albums for an artist endpoint to make a request to express.
-    return this.sendRequestToExpress('/artist/'+encodeURIComponent(artistId)+'/albums').then((data)=> {
-      return data.items.map((artist) => {
-        return new AlbumData(artist);
-      })
+    return this.sendRequestToExpress('/artist-albums/'+encodeURIComponent(artistId)).then((data)=> {
+      return data.items.map((album) => {
+        return new AlbumData(album);
+      });
     });
   }
 
@@ -116,7 +117,7 @@ export class SpotifyService {
 
   getTracksForAlbum(albumId:string):Promise<TrackData[]> {
     //TODO: use the tracks for album endpoint to make a request to express.
-    return this.sendRequestToExpress('/artist/'+encodeURIComponent(albumId)+'/tracks').then((data)=> {
+    return this.sendRequestToExpress('/album-tracks/'+encodeURIComponent(albumId)).then((data)=> {
       return data.items.map((artist) => {
         return new TrackData(artist);
       })

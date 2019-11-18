@@ -21,6 +21,7 @@
 	<div class="col-4">
 		<!--TODO: display artist name-->
 		<h3>{{artist.name}}'s Top Tracks</h3>
+		<app-track-list [tracks]="topTracks"></app-track-list>
 		<!--TODO: display the track list for the album-->
 	</div>
 </div>
@@ -29,7 +30,7 @@
 	<div class="col-6">
 		<!--TODO: display artist name-->
 		<h3>{{artist.name}}'s Albums</h3>
-		<app-carousel [resources]="albums"></app-carousel>
+		<app-carousel [resources]="albums" [carouselId]="artistId"></app-carousel>
 		<!--TODO: Display a carousel component for the artist's albums. Bind carousel's resources and give it a static carouselId.-->
 	</div>
 	<div class="col-6">
