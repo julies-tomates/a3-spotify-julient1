@@ -1,17 +1,17 @@
 <div *ngIf="album" class="row">
 	<div class="col-6">
 		<!--TODO: populate with album name-->
-		<h1>???</h1>
+		<h1>{{album.name}}</h1>
 		<!--TODO: set src to album image URL-->
-		<img id="albumImg">
+		<img [src]="album.imageURL" id="albumImg">
 		<!--TODO: loop over album artists-->
 		<p>
 			<!--TODO: link to artist page, display artist name-->
-			Artist: <a>???</a>
+			Artist: <a href="/{{album.artists[0].category}}/{{album.artists[0].id}}">{{album.artists[0].name}}</a>
 		</p>
 		<p>
 			<!--TODO: link to artist page on spotify, display artist name-->
-			<a class="btn btn-light" role="button" target="_blank" >Open ??? on Spotify</a>
+			<a [href]="album.artists[0].url" class="btn btn-light" role="button" target="_blank" >Open {{album.artists[0].name}} on Spotify</a>
 		</p>
 	</div>
 	<div class="col-6">
