@@ -3,8 +3,8 @@
 1. How many assignment points do you believe you completed (replace the *'s with your numbers)?
 
 */10
-- */1 Communicating with the webserver
-- */1 Populating information about the user
+- 1/1 Communicating with the webserver
+- 1/1 Populating information about the user
 - */3 Populating the search component
 - */2 Artist page
 - */1.5 Album page
@@ -16,6 +16,8 @@
 
 
 3. What online resources did you consult when completing this assignment? (list specific URLs)
+Encodiing - 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 
 
 
