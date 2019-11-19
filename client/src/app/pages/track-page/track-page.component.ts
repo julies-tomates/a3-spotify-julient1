@@ -34,7 +34,7 @@ export class TrackPageComponent implements OnInit {
           features.push(data[i]);
       }
       this.audioFeatures = features;
-      console.log(this.audioFeatures);
+   
     });
     
 

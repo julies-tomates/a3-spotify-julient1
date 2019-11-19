@@ -24,7 +24,7 @@
 		</p>
 	</div>
 	<div *ngIf="audioFeatures" class="col-6">
-		<app-thermometer *ngFor="let feature of audioFeatures; let first=first" [ngClass]="{'active': first}"></app-thermometer>
+		<app-thermometer [audioFeature]="feature" *ngFor="let feature of audioFeatures; let first=first" [ngClass]="{'active': first}"></app-thermometer>
 		<!--TODO: loop over types of features and create a thermometer component for each-->
 	</div>
 </div>
