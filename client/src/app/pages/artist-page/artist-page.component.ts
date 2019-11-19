@@ -15,7 +15,9 @@ export class ArtistPageComponent implements OnInit {
 	artist:ArtistData;
 	relatedArtists:ArtistData[];
 	topTracks:TrackData[];
-	albums:AlbumData[];
+  albums:AlbumData[];
+  albumCarousel:string = "static";
+  relatedArtistsCarousel = "artists";
 
   constructor(private route: ActivatedRoute, private spotifyService:SpotifyService) { }
 
@@ -24,12 +26,15 @@ export class ArtistPageComponent implements OnInit {
     this.spotifyService.getArtist(this.artistId).then((data) => {
       this.artist = data;
     });
-    console.log("hi");
+   
     this.spotifyService.getRelatedArtists(this.artistId).then((data) => {
       this.relatedArtists = data;
     });
     this.spotifyService.getAlbumsForArtist(this.artistId).then((data) => {
       this.albums = data;
+    });
+    this.spotifyService.getTopTracksForArtist(this.artistId).then((data) => {
+      this.topTracks = data;
     });
 
 

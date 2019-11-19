@@ -93,9 +93,10 @@ export class SpotifyService {
   getTopTracksForArtist(artistId:string):Promise<TrackData[]> {
     //TODO: use the top tracks endpoint to make a request to express.
     return this.sendRequestToExpress('/artist-top-tracks/'+encodeURIComponent(artistId)).then((data)=> {
-      return data['artists'].map((artist) => {
-        return new TrackData(artist);
-      })
+      return data['tracks'].map((track) => {
+        return new TrackData(track);
+      });
+  
     });
   }
 
@@ -134,8 +135,11 @@ export class SpotifyService {
   getAudioFeaturesForTrack(trackId:string):Promise<TrackFeature[]> {
     //TODO: use the audio features for track endpoint to make a request to express.
     return this.sendRequestToExpress('/track-audio-features/'+encodeURIComponent(trackId)).then((data) => {
-      return new TrackFeature(data);
-    });
+      return data;
+      });
+      //return data;
+    
+    //return null;
   }
 
 

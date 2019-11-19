@@ -9,9 +9,9 @@
 		</p>
 		<div>
 			<!--TODO: loop over album's artists-->
-			<p>
+			<p *ngFor="let artist of track.artists">
 				<!--TODO: link to artist page, display artist name-->
-				Artist: <a>???</a>
+				Artist: <a href="/artist/{{artist.id}}">{{artist.name}}</a>
 			</p>
 		</div>
 		<p>
@@ -24,6 +24,7 @@
 		</p>
 	</div>
 	<div *ngIf="audioFeatures" class="col-6">
+		<app-thermometer></app-thermometer>
 		<!--TODO: loop over types of features and create a thermometer component for each-->
 	</div>
 </div>
