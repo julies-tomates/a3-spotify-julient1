@@ -13,7 +13,8 @@ import { SpotifyService } from '../../services/spotify.service';
 export class AlbumPageComponent implements OnInit {
 	albumId:string;
 	album:AlbumData;
-	tracks:TrackData[];
+  tracks:TrackData[];
+  
 
 
   constructor(private route: ActivatedRoute, private spotifyService:SpotifyService) { }

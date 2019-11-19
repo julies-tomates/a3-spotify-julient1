@@ -5,9 +5,9 @@
 			<th scope="col">Track</th>
 			<th scope="col">Duration</th>
 			<!--TODO: Use *ngIf to hide if hideArtist is true-->
-			<th *ngIf="hideArtist == true" scope="col">Primary Artist</th>
+			<th *ngIf="hideArtist != true" scope="col">Primary Artist</th>
 			<!--TODO: Use *ngIf to hide if hideAlbum is true-->
-			<th *ngIf="hideAlbum == true" scope="col">Album</th>
+			<th *ngIf="hideAlbum != true" scope="col">Album</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -22,9 +22,9 @@
 			<!--TODO: display the track's duration-->
 			<td>{{track.durationStr}}</td>
 			<!--TODO: Use *ngIf to hide if hideArtist is true; link to the first artist's endpoint and display the first artist's name-->
-			<td *ngIf="hideArtist == true"><a href="/artist/{{track.artists[0].id}}">{{track.artists[0].name}}</a></td>
+			<td *ngIf="hideArtist != true"><a href="/artist/{{track.artists[0].id}}">{{track.artists[0].name}}</a></td>
 			<!--TODO: Use *ngIf to hide if hideAlbum is true; link to the album's endpoint and display the album's name-->
-			<td *ngIf="hideAlbum == true"><a href="/album/{{track.album.id}}">{{track.album.name}}</a></td>
+			<td *ngIf="hideAlbum != true"><a href="/album/{{track.album.id}}">{{track.album.name}}</a></td>
 		</tr>
 	</tbody>
 </table>
