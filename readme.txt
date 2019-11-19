@@ -1,21 +1,25 @@
 --Readme document for *author(s)*, *email(s)*, *UCI id(s)*--
+Author: Julie Tran
+E-mail: julient1@uci.edu
+UCI ID: 32931720
 
 1. How many assignment points do you believe you completed (replace the *'s with your numbers)?
 
-*/10
+10/10
 - 1/1 Communicating with the webserver
 - 1/1 Populating information about the user
 - 3/3 Populating the search component
 - 2/2 Artist page
 - 1.5/1.5 Album page
-- */1.5 Track page
+- 1.5/1.5 Track page
 
 
 2. How long, in hours, did it take you to complete this assignment?
-
+24 hours
 
 
 3. What online resources did you consult when completing this assignment? (list specific URLs)
+
 Including: Links from assignment page, links from Slack
 
 Encoding - 
@@ -24,6 +28,8 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 Mapping Object to Array - 
 https://stackoverflow.com/questions/44615552/mapping-object-to-convert-object-to-array
 
+Angular Documentation -
+https://angular.io/docs
 
 4. What classmates or other individuals did you consult as part of this assignment? What did you discuss?
 None
