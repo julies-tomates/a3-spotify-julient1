@@ -21,6 +21,8 @@ Including: Links from assignment page, links from Slack
 Encoding - 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 
+Mapping Object to Array - 
+https://stackoverflow.com/questions/44615552/mapping-object-to-convert-object-to-array
 
 
 4. What classmates or other individuals did you consult as part of this assignment? What did you discuss?
